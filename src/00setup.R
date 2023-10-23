@@ -25,6 +25,13 @@ library(matrixcalc)
 library(Matrix)
 library(pathview)
 library(pheatmap)
+remotes::install_github("XikunHan/metabolomicsR")
+library(metabolomicsR)
+
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("xcms")
 
 #browseVignettes("pathview")
 
