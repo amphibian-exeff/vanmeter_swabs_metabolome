@@ -12,11 +12,11 @@ library(FSA)
 library(ggplot2)
 library(ggpubr)
 library(rstatix)
-library(BGGM)
+# library(BGGM) ??
 library(ggm)
 library(corrplot)
 library(qgraph)
-library(robFitConGraph)
+#library(robFitConGraph) ??
 library(reshape2)
 library(glasso)
 library(igraph)
@@ -32,6 +32,8 @@ if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
 BiocManager::install("xcms")
+library(xcms)
+library(RColorBrewer) 
 
 #browseVignettes("pathview")
 
