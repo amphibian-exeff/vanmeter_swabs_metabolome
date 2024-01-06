@@ -3,8 +3,11 @@
 library(xcms)
 BiocManager::install("MsExperiment")
 library(MsExperiment)
+browseVignettes("MsExperiment")
 BiocManager::install("msdata")
-library(msdata)
+# library(msdata)
+
+browseVignettes("xcms")
 
 dda_file <- system.file("TripleTOF-SWATH", "PestMix1_DDA.mzML",
                         package = "msdata")
