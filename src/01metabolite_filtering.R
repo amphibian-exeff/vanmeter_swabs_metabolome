@@ -3,17 +3,26 @@
 #Intensity Thresholding: Remove features with peak intensities below a certain threshold. This helps in eliminating low-intensity noise.
 #Variability Filtering: Features with a low coefficient of variation
 #(CV) across replicates are retained, while those with high variability (suggesting they might be noise) can be filtered out.
-#Quality Control (QC) Sample-Based Filtering: Using QC samples (pooled samples analyzed at regular intervals throughout the run) to assess the consistency of feature detection. Features that are not reliably detected in QC samples can be discarded.
-#Retention Time (RT) Window: Metabolites elute at different times in chromatographic metabolomics. By defining a retention time window, one can filter out features that elute too early or too late, which are often associated with noise or artifacts.
+#Quality Control (QC) Sample-Based Filtering: Using QC samples (pooled samples analyzed at regular intervals throughout the run) 
+#to assess the consistency of feature detection. Features that are not reliably detected in QC samples can be discarded.
+#Retention Time (RT) Window: Metabolites elute at different times in chromatographic metabolomics. By defining a retention 
+#time window, one can filter out features that elute too early or too late, which are often associated with noise or artifacts.
 #Blank Sample Filtering: Comparing the metabolite profiles of actual samples to those of blank samples (containing no biological material).
 #Features present in the blank may arise from the instrumentation or sample preparation process and can be removed.
-#Mass Defect Filtering: This exploits the subtle differences in exact masses between naturally occurring isotopes. Some noise or artifacts might not adhere to natural isotopic patterns and can thus be identified and filtered out.
-#Signal-to-Noise Ratio: Filtering based on the signal-to-noise ratio can help to retain only features that have a strong signal compared to the noise level.
-#Known Contaminant Removal: Some contaminants are known to be introduced during sample preparation or analysis. If these are identified in advance, their corresponding features can be removed.
-#Database Matching: Only retaining features that can be matched to known metabolites in databases, though this might lead to the exclusion of novel or unidentified compounds.
-#Normalization: While not strictly a filtering step, normalizing data can help in reducing systemic variation between samples, making subsequent filtering more effective.
+#Mass Defect Filtering: This exploits the subtle differences in exact masses between naturally occurring isotopes. Some noise or 
+#artifacts might not adhere to natural isotopic patterns and can thus be identified and filtered out.
+#Signal-to-Noise Ratio: Filtering based on the signal-to-noise ratio can help to retain only features that have a strong signal 
+#compared to the noise level.
+#Known Contaminant Removal: Some contaminants are known to be introduced during sample preparation or analysis. If these are 
+#identified in advance, their corresponding features can be removed.
+#Database Matching: Only retaining features that can be matched to known metabolites in databases, though this might lead 
+#to the exclusion of novel or unidentified compounds.
+#Normalization: While not strictly a filtering step, normalizing data can help in reducing systemic variation between samples, 
+#making subsequent filtering more effective.
 
-#It's important to note that the choice of prefiltering methods should be informed by the specifics of the metabolomics experiment, the platform used, and the goals of the analysis. Overzealous filtering might lead to the loss of valuable information, while insufficient filtering can cloud the analysis with irrelevant or noisy data.
+#It's important to note that the choice of prefiltering methods should be informed by the specifics of the 
+#metabolomics experiment, the platform used, and the goals of the analysis. Overzealous filtering might lead to the 
+#loss of valuable information, while insufficient filtering can cloud the analysis with irrelevant or noisy data.
 
 #Intensity threshold filtering is a common method to remove low-intensity features, which might be noise or irrelevant signals.
 #Here's a basic step-by-step guide on how to perform intensity threshold filtering for metabolomic data:

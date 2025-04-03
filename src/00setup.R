@@ -23,15 +23,15 @@ library(igraph)
 library(GGally)
 library(matrixcalc)
 library(Matrix)
-library(pathview)
+library(pathviewr) #? was pathview
 library(pheatmap)
-remotes::install_github("XikunHan/metabolomicsR")
+#remotes::install_github("XikunHan/metabolomicsR")
 library(metabolomicsR)
 
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
-BiocManager::install("xcms")
+#BiocManager::install("xcms")
 library(xcms)
 library(RColorBrewer) 
 
@@ -75,5 +75,6 @@ colnames(rvm_swabs_temp) <- rvm_swabs_temp[1,]
 rvm_swabs <- rvm_swabs_temp[-1,]
 rvm_swabs <- cbind (as.vector(rownames(rvm_swabs)),rvm_swabs)
 colnames(rvm_swabs)[1] <- "sample_id"
-colnames(rvm_swabs)[1:7]
+colnames(rvm_swabs)[1:25]
 dim(rvm_swabs)
+View(rvm_swabs)
