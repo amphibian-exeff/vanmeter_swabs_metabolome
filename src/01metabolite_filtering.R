@@ -36,6 +36,7 @@
 # transpose the matrix
 dim(rvm_swabs)
 swab_metabolites <- as.data.frame(t(rvm_swabs[,8:8728]))
+colnames(swab_metabolites)
 dim(swab_metabolites)
 summary(swab_metabolites)
 swab_metabolites[] <- lapply(swab_metabolites, function(x) as.numeric(as.character(x)))
